@@ -1,0 +1,81 @@
+/* General container styling for the user profile */
+.user-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling for the user's name */
+  .user-profile h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* User stats section styling */
+  .user-stats p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .user-stats p strong {
+    color: #000;
+  }
+  
+  /* Elite years styling */
+  .user-elite h3 {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  .user-elite ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .user-elite ul li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+  /* Compliments section styling */
+  .user-compliments h3 {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+  }
+  
+  .user-compliments p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .user-compliments p strong {
+    color: #000;
+  }
+  
+  /* Add a subtle hover effect for list items */
+  .user-elite ul li:hover,
+  .user-compliments p:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+  }
+  

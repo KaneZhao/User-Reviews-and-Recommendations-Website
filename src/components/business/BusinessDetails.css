@@ -95,4 +95,11 @@
       width: 100%;
     }
   }
+
+  y-css-rgh890 {
+    padding-top: 32px !important;
+    margin-top: 32px !important;
+    border-top: 1px solid rgba(235, 235, 235, 1);
+    border-color: rgba(235, 235, 235, 1);
+}
   

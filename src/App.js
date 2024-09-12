@@ -1,5 +1,8 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BusinessDetails from "./components/business/BusinessDetails";
+import Header from './components/header/Header';
+import Layout from './components/Layout';
 
 
 const businessData = {
@@ -40,9 +43,17 @@ const businessData = {
 };
 
 function App() {
+
   return (
-    <div>
-      <BusinessDetails business={businessData} />
+    <div className="App">
+      <Router>
+      <Header/>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/business" element={<BusinessDetails business={businessData} />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

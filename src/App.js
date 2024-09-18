@@ -18,12 +18,12 @@ const businessData = {
   open: true,
   categories: ["Active Life", "Golf"],
   city: "Braddock",
-  review_count: 3,
+  review_count: 1,
   name: "Grand View Golf Club",
   neighborhoods: [],
   longitude: -79.8557821,
   state: "PA",
-  stars: 5.0,
+  stars: 3.5,
   latitude: 40.4034049,
   attributes: {
     Parking: {

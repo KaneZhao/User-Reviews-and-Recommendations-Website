@@ -20,7 +20,7 @@ const MyMap = ({ position }) => {
     <MapContainer
       center={position}
       zoom={13}
-      style={{ height: "400px", width: "100%" }}
+      style={{ height: "200px", width: "100%" }}
     >
       {/* TileLayer is used to display the map tiles */}
       <TileLayer

@@ -160,8 +160,7 @@ y-css-rgh890 {
 
 .business-location {
   flex: 1; /* Makes the right part take up equal space */
-  background-color: lightgreen; /* Adds some background for clarity */
-  padding: 20px;
+  padding: 10px;
   text-align: right;
 }
 
@@ -215,4 +214,17 @@ y-css-rgh890 {
   border-spacing: 0;
   margin-left: 6px;
   margin-right: 6px;
+}
+
+.business-border {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  /* display: block; */
+  padding-top: 32px !important;
+  margin-top: 32px !important;
+  border-top: 1px solid rgba(235, 235, 235, 1);
+  border-color: rgba(235, 235, 235, 1);
 }

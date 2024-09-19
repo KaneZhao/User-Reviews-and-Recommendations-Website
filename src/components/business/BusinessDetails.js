@@ -2,6 +2,21 @@ import React from "react";
 import "./BusinessDetails.css";
 import { FaCheck } from "react-icons/fa";
 import MyMap from "./MyMap";
+import BookOnlineIcon from "@mui/icons-material/BookOnline";
+// import Paper from "@mui/material/Paper";
+// import { styled } from "@mui/material/styles";
+import AttributeIcons from "./attributes/AttributeIcons";
+
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: "#fff",
+//   ...theme.typography.body2,
+//   padding: theme.spacing(1),
+//   textAlign: "center",
+//   color: theme.palette.text.secondary,
+//   ...theme.applyStyles("dark", {
+//     backgroundColor: "#1A2027",
+//   }),
+// }));
 
 const BusinessDetails = ({ business }) => {
   const {
@@ -79,7 +94,7 @@ const BusinessDetails = ({ business }) => {
       </div>
 
       {/* Attributes Section */}
-      <div className="business-attributes-section">
+      <div className="business-attributes-section business-border">
         <h3>Attributes</h3>
         <ul>
           {/* <li>
@@ -114,14 +129,23 @@ const BusinessDetails = ({ business }) => {
             {attributes["Good For Groups"] ? "Yes" : "No"}
           </li>
           <li>
-            <strong>Takes Reservations:</strong>{" "}
-            {attributes["Takes Reservations"] ? "Yes" : "No"}
+            <BookOnlineIcon fontSize="small" />{" "}
+            <span
+              className={
+                attributes["Takes Reservations"]
+                  ? "business-attributes-yes"
+                  : "business-attributes-no"
+              }
+            >
+              Takes Reservations
+            </span>
           </li>
         </ul>
       </div>
+      <AttributeIcons attributes={attributes} />
 
       {/* Hours Section */}
-      <div className="business-row">
+      <div className="business-row business-border">
         <div className="business-hours-section">
           <h3>Hours</h3>
           <ul>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BusinessDetails from "./components/business/BusinessDetails";
 import Header from "./components/header/Header";
 import Layout from "./components/Layout";
+import Review from "./components/reviews/Review";
 
 const businessData = {
   _id: "mYSpR_SLPgUVymYOvTQd_Q",
@@ -36,7 +37,7 @@ const businessData = {
     "Accepts Credit Cards": false,
     "Good for Kids": true,
     "Good For Groups": true,
-    "Takes Reservations": true,
+    "Takes Reservations": false,
   },
   type: "business",
 };
@@ -52,6 +53,7 @@ function App() {
               path="/business"
               element={<BusinessDetails business={businessData} />}
             />
+            <Route path="/review" element={<Review />} />
           </Route>
         </Routes>
       </Router>

@@ -34,10 +34,10 @@ const businessData = {
       lot: false,
       valet: false,
     },
-    "Accepts Credit Cards": false,
+    "Accepts Credit Cards": true,
     "Good for Kids": true,
     "Good For Groups": true,
-    "Takes Reservations": false,
+    "Takes Reservations": true,
   },
   type: "business",
 };

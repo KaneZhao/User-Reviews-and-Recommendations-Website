@@ -38,6 +38,8 @@ const businessData = {
     "Good for Kids": true,
     "Good For Groups": true,
     "Takes Reservations": true,
+    "Free Wi-Fi": true,
+    "Outdoor Seating": false,
   },
   type: "business",
 };

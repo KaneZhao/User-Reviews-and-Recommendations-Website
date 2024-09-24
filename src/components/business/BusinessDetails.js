@@ -1,7 +1,10 @@
 import React from "react";
 import "./BusinessDetails.css";
-import MyMap from "./MyMap";
+import BusinessMap from "./BusinessMap";
 import AttributeIcons from "./attributes/AttributeIcons";
+import Grid from "@mui/material/Grid2";
+// import { Box, Typography, Paper } from "@mui/material";
+import SideCard from "./SideCard";
 
 const BusinessDetails = ({ business }) => {
   const {
@@ -65,47 +68,60 @@ const BusinessDetails = ({ business }) => {
     <div className="business-container">
       {/* Name Section */}
       <div className="business-name-section">
-        <h1 className="business-name">{name}</h1>
-        <div className="business-rating">
-          <Rating rating={stars} />
-          {/* <span className="stars">{"★".repeat(stars)}</span> */}
+        <div className="name-and-rating">
+          <h1 className="business-name">{name}</h1>
           <div className="business-rating">
-            <span className="review-count">{stars} </span>
-            <span className="review-count">
-              ({review_count} {review_count > 1 ? "reviews" : "review"})
-            </span>
+            <Rating rating={stars} />
+            {/* <span className="stars">{"★".repeat(stars)}</span> */}
+            <div className="business-rating">
+              <span className="review-count">{stars} </span>
+              <span className="review-count">
+                ({review_count} {review_count > 1 ? "reviews" : "review"})
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Attributes Section */}
-      <div className="business-attributes-section business-border">
-        <h3>Attributes</h3>
-        <AttributeIcons attributes={attributes} />
-      </div>
+      <Grid container spacing={2}>
+        {/* Attributes Section */}
+        <Grid size={8}>
+          <div className="business-attributes-section business-border">
+            <h2>Amenities and More</h2>
+            <AttributeIcons attributes={attributes} />
+          </div>
 
-      {/* Hours Section */}
-      <div className="business-row business-border">
-        <div className="business-hours-section">
-          <h3>Hours</h3>
-          <ul>
-            {Object.entries(hours).map(([day, time]) => (
-              <li key={day}>
-                <strong>{day}:</strong> {time.open} - {time.close}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="business-location">
-          <p className="address">
-            <strong>Address:</strong> {full_address.replace("\n", ", ")}
-          </p>
-          <p className="location">
-            <strong>Location:</strong> {city}, {state}
-          </p>
-          <MyMap position={[latitude, longitude]} />
-        </div>
-      </div>
+          {/* Hours Section */}
+          <div className="business-border">
+            <div className="business-title">
+              <h2>Location &amp; Hours</h2>
+            </div>
+            <div className="business-row">
+              <div className="business-hours-section">
+                <ul>
+                  {Object.entries(hours).map(([day, time]) => (
+                    <li key={day}>
+                      <strong>{day}:</strong> {time.open} - {time.close}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="business-location">
+                <BusinessMap
+                  position={[latitude, longitude]}
+                  full_address={full_address}
+                  city={city}
+                  state={state}
+                />
+              </div>
+            </div>
+          </div>
+        </Grid>
+
+        <Grid size={4}>
+          <SideCard />
+        </Grid>
+      </Grid>
     </div>
   );
 };

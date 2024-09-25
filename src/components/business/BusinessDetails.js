@@ -4,7 +4,7 @@ import BusinessMap from "./BusinessMap";
 import AttributeIcons from "./attributes/AttributeIcons";
 import Grid from "@mui/material/Grid2";
 // import { Box, Typography, Paper } from "@mui/material";
-import SideCard from "./SideCard";
+import SideCard from "./sidecard/SideCard";
 
 const BusinessDetails = ({ business }) => {
   const {

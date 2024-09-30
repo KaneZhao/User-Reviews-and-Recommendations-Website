@@ -1,45 +1,54 @@
 import React from "react";
-import { Grid, Box, Typography, Paper } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Rating from "../rating/Rating";
+import "./Review.css";
+import TagFacesIcon from "@mui/icons-material/TagFaces";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import WavingHandIcon from "@mui/icons-material/WavingHand";
 
-const RestaurantPage = () => {
+const Review = ({ review }) => {
   return (
-    <Grid container spacing={2}>
-      {/* Left side: Main content that scrolls */}
-      <Grid item xs={12} md={8}>
-        <Box sx={{ height: "200vh", padding: 2 }}>
-          {" "}
-          {/* Making it tall to demonstrate scrolling */}
-          <Typography variant="h4">Restaurant Menu and Reviews</Typography>
-          <Typography variant="body1" paragraph>
-            {/* Some long text to enable scrolling */}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque ac felis eget nunc facilisis sagittis non non erat. Ut
-            tincidunt dictum ex, at egestas enim luctus ac. Cras egestas
-            condimentum urna, vitae tempus nulla rutrum at. Aenean lobortis
-            felis id neque ultricies, at tincidunt magna tincidunt. Donec sit
-            amet orci quam. Suspendisse potenti. Nam efficitur lorem ut volutpat
-            fringilla.
-            {/* Add more content as needed */}
-          </Typography>
-        </Box>
-      </Grid>
-
-      {/* Right side: Fixed restaurant information */}
-      <Grid item xs={12} md={4}>
-        <Box sx={{ position: "sticky", top: 20 }}>
-          <Paper elevation={3} sx={{ padding: 2 }}>
-            <Typography variant="h6">Restaurant Information</Typography>
-            <Typography variant="body1">Location: 123 Main Street</Typography>
-            <Typography variant="body1">
-              Opening Hours: 10 AM - 10 PM
-            </Typography>
-            <Typography variant="body1">Cuisine: Italian</Typography>
-            <Typography variant="body1">Contact: (123) 456-7890</Typography>
-          </Paper>
-        </Box>
-      </Grid>
-    </Grid>
+    <div
+      className="review-container"
+      style={{ border: "1px solid #ddd", padding: "20px", margin: "10px" }}
+    >
+      <div className="review-flex">
+        <div className="flex-left">
+          <Avatar
+            style={{ flex: "1" }}
+            alt="Kane"
+            src="/static/images/avatar/1.jpg"
+          />
+        </div>
+        <div className="flex-right">
+          <span>{review.user_name}</span>
+        </div>
+      </div>
+      <div className="review-flex">
+        <div className="flex-left">
+          <Rating rating={review.stars} />
+        </div>
+        <div className="flex-right">
+          <span>{review.date}</span>
+        </div>
+      </div>
+      <p className="review_text">{review.text}</p>
+      <div className="votes" style={{ marginTop: "10px" }}>
+        <div className="vote-item">
+          <TagFacesIcon />
+          <span className="vote-text">Funny: {review.votes.funny}</span>
+        </div>
+        <div className="vote-item">
+          <LightbulbIcon />
+          <span className="vote-text">Useful: {review.votes.useful}</span>
+        </div>
+        <div className="vote-item">
+          <WavingHandIcon />
+          <span className="vote-text">Cool: {review.votes.cool}</span>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default RestaurantPage;
+export default Review;

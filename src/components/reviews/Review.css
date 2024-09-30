@@ -14,3 +14,126 @@
   background: rgb(251, 80, 60) !important;
   width: 100%;
 }
+
+.review-flex {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border-color: rgba(235, 235, 235, 1);
+  min-width: 100%;
+  border-collapse: initial;
+  border-spacing: 8px 0;
+  margin-left: -8px;
+  margin-right: -8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+}
+.flex-left {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  border-color: rgba(235, 235, 235, 1);
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.flex-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  border-color: rgba(235, 235, 235, 1);
+  width: 100%;
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: text-bottom;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.review_text {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 20px;
+  color: rgba(45, 46, 47, 1);
+  text-align: left;
+  max-width: 655px;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+.votes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border-color: rgba(235, 235, 235, 1);
+  min-width: 100%;
+  border-collapse: initial;
+  border-spacing: 8px 0;
+  margin-left: -8px;
+  margin-right: -8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+}
+.vote-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border-color: rgba(235, 235, 235, 1);
+  box-sizing: border-box;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column; /* Aligns items from top to bottom */
+  justify-content: flex-start; /* Ensures items start from the top */
+  align-items: center;
+  margin-left: 5px;
+}
+.vote-text {
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  text-align: left;
+  color: rgb(110, 112, 114);
+}

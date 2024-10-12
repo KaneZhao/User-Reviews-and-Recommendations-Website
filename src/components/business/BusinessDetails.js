@@ -6,8 +6,10 @@ import Grid from "@mui/material/Grid2";
 // import { Box, Typography, Paper } from "@mui/material";
 import SideCard from "./sidecard/SideCard";
 import Rating from "../rating/Rating";
+import Review from "../reviews/Review";
+import RatingCard from "../rating/RatingCard";
 
-const BusinessDetails = ({ business }) => {
+const BusinessDetails = ({ business, review }) => {
   const {
     name,
     full_address,
@@ -73,9 +75,19 @@ const BusinessDetails = ({ business }) => {
               </div>
             </div>
           </div>
+          <RatingCard
+            reviewList={review}
+            stars={stars}
+            review_count={review_count}
+          />
+          <ul>
+            {review.map((item) => (
+              <Review review={item} />
+            ))}
+          </ul>
         </Grid>
 
-        <Grid size={4}>
+        <Grid size={4} className="side-card">
           <SideCard />
         </Grid>
       </Grid>

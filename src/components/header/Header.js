@@ -35,6 +35,12 @@ const Header = () => {
           >
             Review
           </NavLink>
+          <NavLink
+            to="/user"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            User
+          </NavLink>
         </div>
         <div style={{ display: "flex", gap: "10px" }}>
           <button

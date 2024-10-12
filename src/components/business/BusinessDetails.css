@@ -255,3 +255,35 @@ h2 {
   margin-left: 16px;
   margin-right: 16px;
 }
+
+/* .rating-line {
+  border-collapse: collapse;
+  border-spacing: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  border-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  height: 10px;
+  background: rgb(251, 80, 60) !important;
+  width: 100%;
+} */
+.side-card {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  padding-left: 16px !important;
+  border-color: rgba(235, 235, 235, 1);
+  box-sizing: border-box;
+  -webkit-box-flex: 4;
+  flex-grow: 4;
+  position: sticky;
+  align-self: start;
+  top: 0;
+  width: calc(100% / 3);
+}

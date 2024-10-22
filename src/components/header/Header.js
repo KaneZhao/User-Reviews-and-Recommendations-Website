@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header style={{ backgroundColor: "darkslategray", padding: "10px" }}>
+    <header style={{ backgroundColor: "transparent", padding: "10px" }}>
       <nav
         style={{
           display: "flex",
@@ -20,24 +20,24 @@ const Header = () => {
           </NavLink>
         </div>
         <div style={{ display: "flex", gap: "10px" }}>
-          <NavLink to="/" style={{ color: "white", textDecoration: "none" }}>
+          <NavLink to="/" style={{ color: "black", textDecoration: "none" }}>
             Home
           </NavLink>
           <NavLink
             to="/business"
-            style={{ color: "white", textDecoration: "none" }}
+            style={{ color: "black", textDecoration: "none" }}
           >
             Business List
           </NavLink>
           <NavLink
             to="/review"
-            style={{ color: "white", textDecoration: "none" }}
+            style={{ color: "black", textDecoration: "none" }}
           >
             Review
           </NavLink>
           <NavLink
             to="/user"
-            style={{ color: "white", textDecoration: "none" }}
+            style={{ color: "black", textDecoration: "none" }}
           >
             User
           </NavLink>
@@ -46,7 +46,7 @@ const Header = () => {
           <button
             style={{
               padding: "5px 10px",
-              backgroundColor: "transparent",
+              backgroundColor: "black",
               border: "1px solid lightblue",
               color: "lightblue",
               cursor: "pointer",
@@ -57,7 +57,7 @@ const Header = () => {
           <button
             style={{
               padding: "5px 10px",
-              backgroundColor: "transparent",
+              backgroundColor: "black",
               border: "1px solid lightblue",
               color: "lightblue",
               cursor: "pointer",

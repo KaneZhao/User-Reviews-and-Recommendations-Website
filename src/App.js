@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Layout from "./components/Layout";
 import Review from "./components/reviews/Review";
 import User from "./components/users/User";
+import EmblaCarousel from "./components/carousel/EmblaCarousel";
 
 const businessData = {
   _id: "mYSpR_SLPgUVymYOvTQd_Q",
@@ -202,6 +203,14 @@ const userData = {
   elite: [],
 };
 
+const OPTIONS = { loop: true };
+// const SLIDE_COUNT = 3;
+const SLIDES = [
+  "https://s3-media0.fl.yelpcdn.com/educatorphoto/T3U8OES-w0Pat6ijyqf8pg/o.jpg", // Image 2 URL
+  "https://s3-media0.fl.yelpcdn.com/educatorphoto/G0VqnNYvHYpeG1HqrOVE3g/o.jpg", // Image 3 URL
+  "https://s3-media0.fl.yelpcdn.com/educatorphoto/GTlezQc8dVGQxb_l0KhTYQ/o.jpg", // Image 4 URL
+];
+
 function App() {
   return (
     <div className="App">
@@ -220,6 +229,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </div>
   );
 }

@@ -1,17 +1,23 @@
 .embla {
-  max-width: 48rem;
+  max-width: 100%;
   margin: auto;
   --slide-height: 19rem;
   --slide-spacing: 1rem;
-  --slide-size: 70%;
+  --slide-size: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
 }
 .embla__viewport {
+  /* overflow: hidden; */
   overflow: hidden;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
 }
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
+  height: 100%;
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);
@@ -95,4 +101,38 @@
   font-size: 1.4rem;
   padding: 0 2.4rem;
   min-width: 8.4rem;
+}
+
+.embla__slide__img {
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  width: 100%;
+  height: 100%;
+}
+
+.embla__slide__background {
+  background-size: cover; /* Makes the image cover the entire slide */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.embla__slide__content {
+  position: absolute; /* Ensures the content is on top of the background */
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%); /* Center the content */
+  text-align: center;
+  color: white;
+}
+
+.embla__header {
+  position: absolute; /* Fix the header to the top of the carousel */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Ensure it stays above the slides */
+  background-color: rgba(rgba(0, 0, 0, 0.5)); /* Semi-transparent background */
+  padding: 10px; /* Adjust padding as necessary */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: add shadow for better visibility */
 }

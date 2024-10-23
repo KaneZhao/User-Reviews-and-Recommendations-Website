@@ -6,6 +6,7 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
+import Header from "../header/Header";
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
@@ -60,16 +61,25 @@ const EmblaCarousel = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
+          <div className="embla__header">This is the header!</div>
           {slides.map((src, index) => (
             <div className="embla__slide" key={index}>
-              {/* <div className="embla__slide__number">
-                <span>{index + 1}</span>
-              </div> */}
-              <img
+              {/* <img
                 src={src}
                 alt={`Slide ${index + 1}`}
                 className="embla__slide__img"
-              />
+              /> */}
+              <div
+                className="embla__slide__background"
+                style={{ backgroundImage: `url(${src})` }}
+              >
+                <div className="embla__slide__content">
+                  <h1 className="embla__slide__header">Header {index + 1}</h1>
+                  <p className="embla__slide__description">
+                    This is a description for slide {index + 1}.
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

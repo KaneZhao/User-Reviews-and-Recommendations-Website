@@ -214,7 +214,7 @@ const SLIDES = [
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -228,7 +228,7 @@ function App() {
             <Route path="/user" element={<User user={userData} />} />
           </Route>
         </Routes>
-      </Router>
+      </Router> */}
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </div>
   );

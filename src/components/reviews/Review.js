@@ -17,7 +17,7 @@ const Review = ({ review }) => {
           <Avatar
             style={{ flex: "1" }}
             alt="Kane"
-            src="/static/images/avatar/1.jpg"
+            src={`https://i.pravatar.cc/48?u=${review.user_id}`}
           />
         </div>
         <div className="flex-right">

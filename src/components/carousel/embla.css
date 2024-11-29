@@ -110,11 +110,24 @@
 }
 
 .embla__slide__background {
-  background-size: cover; /* Makes the image cover the entire slide */
+  /* background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: 100%; */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
 }
 
 .embla__slide__content {
@@ -132,7 +145,7 @@
   left: 0;
   right: 0;
   z-index: 10; /* Ensure it stays above the slides */
-  background-color: rgba(rgba(0, 0, 0, 0.5)); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px; /* Adjust padding as necessary */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: add shadow for better visibility */
+  /* box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); */
 }

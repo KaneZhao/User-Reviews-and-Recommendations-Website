@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import Layout from "./components/Layout";
 import Review from "./components/reviews/Review";
 import User from "./components/users/User";
-import EmblaCarousel from "./components/carousel/EmblaCarousel";
+// import EmblaCarousel from "./components/carousel/EmblaCarousel";
 
 const businessData = {
   _id: "mYSpR_SLPgUVymYOvTQd_Q",
@@ -214,7 +214,7 @@ const SLIDES = [
 function App() {
   return (
     <div className="App">
-      {/* <Router>
+      <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -228,8 +228,8 @@ function App() {
             <Route path="/user" element={<User user={userData} />} />
           </Route>
         </Routes>
-      </Router> */}
-      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+      </Router>
+      {/* <EmblaCarousel slides={SLIDES} options={OPTIONS} /> */}
     </div>
   );
 }

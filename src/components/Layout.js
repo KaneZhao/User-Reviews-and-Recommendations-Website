@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
+import Header from "./header/Header";
 
 const Layout = () => {
   const [backgroundImage, setBackgroundImage] = useState(
@@ -81,17 +82,39 @@ const Layout = () => {
   return (
     <main style={divStyle}>
       <Outlet />
+      <Header />
       <h1>Change the Background</h1>
-      <div className="buttonContainer">
+      <div style={buttonContainer}>
         {/* Buttons to change the background */}
-        <button className="buttonStyle">
-          <span className="spanStyle"></span>
+        <button
+          style={buttonStyle}
+          onClick={() =>
+            changeBackground(
+              "https://s3-media0.fl.yelpcdn.com/educatorphoto/T3U8OES-w0Pat6ijyqf8pg/o.jpg"
+            )
+          }
+        >
+          <span style={spanStyle}></span>
         </button>
-        <button className="buttonStyle">
-          <span className="spanStyle"></span>
+        <button
+          style={buttonStyle}
+          onClick={() =>
+            changeBackground(
+              "https://s3-media0.fl.yelpcdn.com/educatorphoto/G0VqnNYvHYpeG1HqrOVE3g/o.jpg"
+            )
+          }
+        >
+          <span style={spanStyle}></span>
         </button>
-        <button className="buttonStyle">
-          <span className="spanStyle"></span>
+        <button
+          style={buttonStyle}
+          onClick={() =>
+            changeBackground(
+              "https://s3-media0.fl.yelpcdn.com/educatorphoto/GTlezQc8dVGQxb_l0KhTYQ/o.jpg"
+            )
+          }
+        >
+          <span style={spanStyle}></span>
         </button>
         {/* <button
           onClick={() =>
